@@ -1,9 +1,9 @@
-# Your Name Here
+# Peyton Chandler
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
-# Sources, people worked with, help given to: 
+# 11/3/24
+# Lab 07
+# Lab Section: 11
+# Sources, people worked with, help given to: emmanuelthe TA helped me quite a bit on all 3 problems
 # your
 # comments
 # here
@@ -18,6 +18,18 @@
 # You will continue to prompt the user until a proper integer value is entered
 
 factorial = 1
+
+while True:
+    number = input("Please input a positive number that you want the factorial of: ")
+    if number.isdigit() and int(number) > 0:
+        number = int(number)
+        for i in range (1, number + 1):
+            factorial *= i
+        break
+    else:
+        print("please enter an appropriate positive number") 
+    
+
 
 print(f"The result of the factorial based on the given bound is {factorial}")
 
@@ -39,6 +51,16 @@ print("*"*75)
 
 num_sum = 0 
 
+while True:
+    user_input = input("Enter and integer to sum or type 'exit' to end :").strip()
+    if user_input.lower() == "exit":
+        break
+
+    if user_input.isdigit() or (user_input.startswith('-') and user_input[1:].isdigit()):
+        num_sum += int(user_input)
+    else:
+        print("invalid input, please try a valid number")
+
 print(f"Your final sum is {num_sum}")
 
 print("*"*75)
@@ -58,5 +80,43 @@ print("*"*75)
     # So, it should function the same for `5 + 6` as `5+6`
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
+
+while True:
+    userinput = input("enter a calculation or type 'exit' to exit: ").strip()
+    if userinput.lower() == "exit":
+        break
+
+    operators = ['+','-','*','/','%']
+    for operator in operators:
+        if (operator in userinput):
+            numbers = userinput.split(operator)
+            numbers = [float(num.strip()) for num in numbers]
+            numbers[0]
+            numbers[1]
+            #if len(number) == 2 and number[0].strip().isdigit() and number[1].strip().isdigit():
+            
+
+            final_output = 0
+
+            match operator:
+                case "+":
+                    final_output = numbers[0] + numbers[1]
+                case "-":
+                    final_output = numbers[0] - numbers[1]
+                case "*":
+                    final_output = numbers[0] * numbers[1]
+                case "/":
+                    final_output = numbers[0] / numbers[1]
+                case "%":
+                    final_output = numbers[0] % numbers[1]
+                
+                
+            print(f"The result of {numbers[0]} {operator} {numbers[1]} is {final_output}")
+            break
+
+
+    else:
+        print("invalid input, try again")
+            
 
         
