@@ -1,8 +1,8 @@
 # [Peyton Chandler]
 ## [Assignment Lab 7]
-## [Submission date: 10/29/24]
+## [Submission date: 11/3/24]
 ## Worked with/sources 
-* example
+* emmanuel helped me a little on all of the questions 
 * example
 * example
 * example
