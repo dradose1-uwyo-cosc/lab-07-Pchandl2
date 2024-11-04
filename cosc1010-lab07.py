@@ -93,7 +93,7 @@ while True:
             numbers = [float(num.strip()) for num in numbers]
             numbers[0]
             numbers[1]
-            #if len(number) == 2 and number[0].strip().isdigit() and number[1].strip().isdigit():
+            
             
 
             final_output = 0
